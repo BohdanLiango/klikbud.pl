@@ -14,12 +14,12 @@ use Illuminate\Contracts\View\View;
 
 class MainController extends Controller
 {
-    protected $mainSlider;
-    protected $service;
-    protected $counter;
-    protected $testimonial;
-    protected $additionalData;
-    protected $gallery;
+    protected MainSliderService $mainSlider;
+    protected ServicesService $service;
+    protected CounterService $counter;
+    protected TestimonialsService $testimonial;
+    protected AdditionalData $additionalData;
+    protected GalleryService $gallery;
 
     /**
      * MainController constructor.

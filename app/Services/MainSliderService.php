@@ -19,7 +19,7 @@ class MainSliderService extends Service
                 ->orderBy('slider_number_show')
                 ->get();
         }catch (Exception $e){
-            return abort(403);
+            return abort(404);
         }
 
     }

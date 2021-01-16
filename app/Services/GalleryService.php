@@ -21,7 +21,7 @@ class GalleryService extends Service
                 ->orderBy('id', 'DESC')
                 ->paginate($paginate);
         }catch (Exception $e){
-            return abort(403);
+            return abort(404);
         }
 
     }
