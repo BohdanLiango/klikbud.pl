@@ -11,17 +11,23 @@ use Venturecraft\Revisionable\RevisionableTrait;
 
 class MainSlider extends Model
 {
-    protected $table = 'home_main_slider';
-    protected $guarded = [];
+    protected string $table = 'klikbud_main_slider';
+    protected array $guarded = [];
+    protected array $casts =  [
+        'alt' => 'array',
+        'textYellow' => 'array',
+        'textBlack' => 'array',
+        'description' => 'array'
+    ];
 
     use HasFactory;
     use SoftDeletes;
 
     use RevisionableTrait;
-    protected $revisionEnabled = true;
-    protected $revisionCreationsEnabled = true;
-    protected $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
-    protected $historyLimit = 500; //Maintain a maximum of 500 changes at any point of time, while cleaning up old revisions.
+    protected bool $revisionEnabled = true;
+    protected bool $revisionCreationsEnabled = true;
+    protected bool $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
+    protected int  $historyLimit = 500; //Maintain a maximum of 500 changes at any point of time, while cleaning up old revisions.
 
     /**
      * @return BelongsTo

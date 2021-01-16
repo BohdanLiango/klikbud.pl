@@ -9,15 +9,22 @@ use Venturecraft\Revisionable\RevisionableTrait;
 
 class Services extends Model
 {
-    protected $table = 'home_service';
-    protected $guarded = [];
+    protected string $table = 'klikbud_service';
+    protected array $guarded = [];
+
+    protected array $casts =  [
+        'slug' => 'array',
+        'alt' => 'array',
+        'title' => 'array',
+        'description' => 'array'
+    ];
 
     use HasFactory;
     use SoftDeletes;
 
     use RevisionableTrait;
-    protected $revisionEnabled = true;
-    protected $revisionCreationsEnabled = true;
-    protected $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
-    protected $historyLimit = 500; //Maintain a maximum of 500 changes at any point of time, while cleaning up old revisions.
+    protected bool $revisionEnabled = true;
+    protected bool $revisionCreationsEnabled = true;
+    protected bool $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
+    protected int  $historyLimit = 500; //Maintain a maximum of 500 changes at any point of time, while cleaning up old revisions.
 }
