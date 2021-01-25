@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKlikbudTestimonialsTable extends Migration
+class CreateKlikbudOpinionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateKlikbudTestimonialsTable extends Migration
      */
     public function up()
     {
-        Schema::create('klikbud_testimonials', function (Blueprint $table) {
+        Schema::create('klikbud_opinion', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->json('testimonial_service')->nullable();
-            $table->integer('stars')->nullable();
-            $table->integer('status_to_main_page_id')->nullable(); // 1 - Active in main page 2 - Hidden
-            $table->bigInteger('user_id')->nullable();
+            $table->integer('service_id')->unsigned()->nullable();
+            $table->tinyInteger('stars')->unsigned()->nullable();
+            $table->tinyInteger('status_to_main_page_id')->unsigned()->nullable(); // 1 - Active in main page 2 - Hidden
+            $table->integer('user_id')->unsigned()->nullable();
             $table->integer('moderated_id')->nullable();
-            $table->json('testimonial')->nullable();
+            $table->mediumText('opinion')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
@@ -34,6 +34,6 @@ class CreateKlikbudTestimonialsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('klikbud_testimonials');
+        Schema::dropIfExists('klikbud_opinion');
     }
 }

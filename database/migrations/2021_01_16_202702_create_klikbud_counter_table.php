@@ -15,10 +15,10 @@ class CreateKlikbudCounterTable extends Migration
     {
         Schema::create('klikbud_counter', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('project_completed')->nullable();
-            $table->bigInteger('happy_clients')->nullable();
-            $table->bigInteger('workers_employed')->nullable();
-            $table->bigInteger('awards_won')->nullable();
+            $table->integer('project_completed')->default(0);
+            $table->integer('happy_clients')->default(0);
+            $table->integer('workers_employed')->default(0);
+            $table->integer('awards_won')->default(0);
             $table->timestamps();
         });
     }

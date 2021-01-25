@@ -15,11 +15,11 @@ class CreateKlikbudGalleryTable extends Migration
     {
         Schema::create('klikbud_gallery', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('object_id')->nullable();
-            $table->integer('category_id')->nullable();
-            $table->integer('status_gallery_id')->nullable(); // Status to view gallery
-            $table->integer('status_to_main_page_id')->nullable(); // In main page 1
-            $table->integer('image_id')->nullable();
+            $table->integer('object_id')->unsigned()->nullable();
+            $table->integer('category_id')->unsigned()->nullable();
+            $table->tinyInteger('status_gallery_id')->unsigned()->nullable(); // Status to view gallery
+            $table->tinyInteger('status_to_main_page_id')->unsigned()->nullable(); // In main page 1
+            $table->integer('image_id')->unsigned()->nullable();
             $table->json('old_images_id')->nullable();
             $table->json('slug')->nullable();
             $table->json('title')->nullable();

@@ -15,11 +15,11 @@ class CreateKlikbudMainSliderTable extends Migration
     {
         Schema::create('klikbud_main_slider', function (Blueprint $table) {
             $table->id();
-            $table->integer('status_to_main_page_id')->nullable(); //  1-active, 2-hidden(but show), 3-disable
+            $table->tinyInteger('status_to_main_page_id')->unsigned()->nullable(); //  1-active, 2-hidden(but show), 3-disable
             $table->integer('slider_number_show')->nullable(); //1,2,3; 0 - default
-            $table->bigInteger('image_id')->nullable(); //id
-            $table->bigInteger('user_id')->nullable();
-            $table->integer('moderated_id')->nullable();
+            $table->integer('image_id')->unsigned()->nullable(); //id
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->tinyInteger('moderated_id')->unsigned()->nullable();
             $table->json('alt')->nullable();
             $table->json('textYellow')->nullable();
             $table->json('textBlack')->nullable();
