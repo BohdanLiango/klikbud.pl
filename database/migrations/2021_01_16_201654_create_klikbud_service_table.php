@@ -15,10 +15,10 @@ class CreateKlikbudServiceTable extends Migration
     {
         Schema::create('klikbud_service', function (Blueprint $table) {
             $table->id();
-            $table->integer('status_to_main_page_id')->nullable(); // In main page 1
+            $table->integer('status_to_main_page_id')->default(2); // In main page 1
             $table->bigInteger('image_id')->nullable();
             $table->bigInteger('user_id')->nullable();
-            $table->integer('moderated_id')->nullable();
+            $table->integer('moderated_id')->default(3);
             $table->json('slug')->nullable();
             $table->json('alt')->nullable();
             $table->json('title')->nullable();
