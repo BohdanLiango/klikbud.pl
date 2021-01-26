@@ -18,11 +18,12 @@ class CreateKlikbudOpinionTable extends Migration
             $table->string('name')->nullable();
             $table->integer('service_id')->unsigned()->nullable();
             $table->tinyInteger('stars')->unsigned()->nullable();
-            $table->tinyInteger('status_to_main_page_id')->unsigned()->nullable(); // 1 - Active in main page 2 - Hidden
-            $table->tinyInteger('is_new_id')->unsigned()->default(false);
+            $table->tinyInteger('status_to_main_page_id')->unsigned()->default(2); // 1 - Active in main page 2 - Hidden
+            $table->tinyInteger('is_new_id')->unsigned()->default(false); // New where client send new opinion in site
+            $table->integer('reader_id')->nullable(); //If status is new id
             $table->integer('portal_opinion_id')->unsigned()->default(NULL);
             $table->integer('user_id')->unsigned()->nullable();
-            $table->integer('moderated_id')->nullable();
+            $table->integer('moderated_id')->default(3);
             $table->mediumText('opinion')->nullable();
             $table->dateTime('date_add')->nullable();
             $table->softDeletes();
