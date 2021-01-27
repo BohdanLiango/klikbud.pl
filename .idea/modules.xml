@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../admin.klikbud.pl/.idea/admin.klikbud.pl.iml" filepath="$PROJECT_DIR$/../admin.klikbud.pl/.idea/admin.klikbud.pl.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/klikbud.pl.iml" filepath="$PROJECT_DIR$/.idea/klikbud.pl.iml" />
     </modules>
   </component>
