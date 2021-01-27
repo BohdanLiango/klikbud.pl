@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKlikbudContactTable extends Migration
+class CreateKlikbudOpinionPortalTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateKlikbudContactTable extends Migration
      */
     public function up()
     {
-        Schema::create('klikbud_contact', function (Blueprint $table) {
+        Schema::create('klikbud_opinion_portal', function (Blueprint $table) {
             $table->id();
-            $table->text('user_name')->nullable();
-            $table->text('email')->nullable();
-            $table->text('message')->nullable();
-            $table->bigInteger('user_read_id')->unsigned()->nullable();
-            $table->tinyInteger('status_id')->unsigned()->nullable();
+            $table->string('title');
+            $table->text('url');
+            $table->bigInteger('user_id');
+            $table->bigInteger('image_id')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
@@ -32,6 +31,6 @@ class CreateKlikbudContactTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('klikbud_contact');
+        Schema::dropIfExists('klikbud_opinion_portal');
     }
 }

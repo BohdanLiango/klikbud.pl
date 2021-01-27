@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Rennokki\QueryCache\Traits\QueryCacheable;
 use Venturecraft\Revisionable\RevisionableTrait;
 
 class MainSlider extends Model
@@ -28,6 +29,10 @@ class MainSlider extends Model
     protected $revisionCreationsEnabled = true;
     protected $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
     protected $historyLimit = 500; //Maintain a maximum of 500 changes at any point of time, while cleaning up old revisions.
+
+    use QueryCacheable;
+    protected $cacheFor = 3600 * 3600;
+    protected static $flushCacheOnUpdate = true;
 
     /**
      * @return BelongsTo

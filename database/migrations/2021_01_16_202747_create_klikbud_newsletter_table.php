@@ -16,7 +16,7 @@ class CreateKlikbudNewsletterTable extends Migration
         Schema::create('klikbud_newsletter', function (Blueprint $table) {
             $table->id();
             $table->text('email')->nullable();
-            $table->integer('count_send_information')->unsigned()->nullable();
+            $table->bigInteger('count_send_information')->unsigned()->nullable();
             $table->string('token')->nullable();
             $table->softDeletes();
             $table->timestamps();

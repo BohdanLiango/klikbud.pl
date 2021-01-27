@@ -31,8 +31,8 @@
                     <div class="widget widget_services">
                         <h4 class="widget-title">{{ trans('layout.footer.usefulLinks') }}</h4>
                         <ul>
-                            <li><a href="{{ route('gallery') }}">{{ trans('layout.navigation.gallery') }}</a></li>
-                            <li><a href="{{ route('contact') }}">{{ trans('layout.navigation.contact') }}</a></li>
+                            <li><a href="{{ route('main') }}">{{ trans('layout.navigation.gallery') }}</a></li>
+                            <li><a href="{{ route('main') }}">{{ trans('layout.navigation.contact') }}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                     <div class="widget widget_newsletter">
                         <h4 class="widget-title">{{ trans('layout.footer.newsletter') }}</h4>
                         <div class="newsletter-bx">
-                            <form action="{{route('save.newsletter')}}" method="post">
+                            <form action="{{route('main')}}" method="post">
                                 @csrf
                                 @if (session('status') === 'newsletterStore')
                                     <ul>
@@ -139,7 +139,7 @@
                 </div>
                 <div class="wt-footer-bot-right">
                     <ul class="copyrights-nav pull-right">
-                        <li><a href="{{ route('contact') }}">{{ trans('layout.navigation.contact') }}</a></li>
+                        <li><a href="{{ route('main') }}">{{ trans('layout.navigation.contact') }}</a></li>
                     </ul>
                 </div>
             </div>

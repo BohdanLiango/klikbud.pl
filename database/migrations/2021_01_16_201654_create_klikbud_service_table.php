@@ -16,8 +16,8 @@ class CreateKlikbudServiceTable extends Migration
         Schema::create('klikbud_service', function (Blueprint $table) {
             $table->id();
             $table->tinyInteger('status_to_main_page_id')->unsigned()->default(2); // In main page 1
-            $table->integer('image_id')->unsigned()->nullable();
-            $table->integer('user_id')->unsigned()->nullable();
+            $table->bigInteger('image_id')->unsigned()->nullable();
+            $table->bigInteger('user_id')->unsigned()->nullable();
             $table->tinyInteger('moderated_id')->unsigned()->default(3);
             $table->json('slug')->nullable();
             $table->json('alt')->nullable();

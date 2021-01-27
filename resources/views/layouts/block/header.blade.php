@@ -61,14 +61,14 @@
                 {{--<!-- MAIN Vav -->--}}
                 <div class="header-nav navbar-collapse collapse ">
                     <ul class=" nav navbar-nav">
-                        <li class="{{ Route::currentRouteName() === 'home' ? 'active' : null}}">
+                        <li class="{{ Route::currentRouteName() === 'main' ? 'active' : null}}">
                             <a href="{{ route('main') }}">{{ trans('layout.navigation.home') }}</a>
                         </li>
-                        <li class="{{ Route::currentRouteName() === 'gallery' ? 'active' : null}}">
-                            <a href="{{ route('gallery') }}">{{ trans('layout.navigation.gallery') }}</a>
+                        <li class="{{ Route::currentRouteName() === 'main' ? 'active' : null}}">
+                            <a href="{{ route('main') }}">{{ trans('layout.navigation.gallery') }}</a>
                         </li>
-                        <li class="{{ Route::currentRouteName() === 'contact' ? 'active' : null}}">
-                            <a href="{{ route('contact') }}">{{ trans('layout.navigation.contact') }}</a>
+                        <li class="{{ Route::currentRouteName() === 'main' ? 'active' : null}}">
+                            <a href="{{ route('main') }}">{{ trans('layout.navigation.contact') }}</a>
                         </li>
                     </ul>
                 </div>
