@@ -17,10 +17,9 @@ class CreateKlikbudGalleryTable extends Migration
             $table->id();
             $table->bigInteger('object_id')->unsigned()->nullable();
             $table->integer('category_id')->unsigned()->nullable();
-            $table->tinyInteger('status_gallery_id')->unsigned()->nullable(); // Status to view gallery
-            $table->tinyInteger('status_to_main_page_id')->unsigned()->nullable(); // In main page 1
+            $table->tinyInteger('status_gallery_id')->unsigned()->default(0); // Status to view gallery
+            $table->tinyInteger('status_to_main_page_id')->unsigned()->default(0); // In main page 1
             $table->bigInteger('image_id')->unsigned()->nullable();
-            $table->json('old_images_id')->nullable();
             $table->json('slug')->nullable();
             $table->json('title')->nullable();
             $table->json('description')->nullable();
