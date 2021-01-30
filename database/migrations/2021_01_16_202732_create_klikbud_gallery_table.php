@@ -17,13 +17,14 @@ class CreateKlikbudGalleryTable extends Migration
             $table->id();
             $table->bigInteger('object_id')->unsigned()->nullable();
             $table->integer('category_id')->unsigned()->nullable();
-            $table->tinyInteger('status_gallery_id')->unsigned()->default(0); // Status to view gallery
-            $table->tinyInteger('status_to_main_page_id')->unsigned()->default(0); // In main page 1
+            $table->tinyInteger('status_gallery_id')->unsigned()->default(config('klikbud.klikbud.status_to_gallery.not_visible'));
+            $table->tinyInteger('status_to_main_page_id')->unsigned()->default(config('klikbud.klikbud.status_to_main_page.not_visible'));
             $table->bigInteger('image_id')->unsigned()->nullable();
             $table->json('slug')->nullable();
             $table->json('title')->nullable();
             $table->json('description')->nullable();
             $table->json('alt')->nullable();
+            $table->tinyInteger('moderated_id')->unsigned()->default(config('klikbud.klikbud.moderated.to_moderation'));
             $table->softDeletes();
             $table->timestamps();
         });

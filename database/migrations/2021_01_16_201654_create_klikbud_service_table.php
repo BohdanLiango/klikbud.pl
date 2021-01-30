@@ -15,14 +15,14 @@ class CreateKlikbudServiceTable extends Migration
     {
         Schema::create('klikbud_service', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('status_to_main_page_id')->unsigned()->default(2); // In main page 1
+            $table->tinyInteger('status_to_main_page_id')->unsigned()->default(config('klikbud.klikbud.status_to_main_page.not_visible'));
             $table->bigInteger('image_id')->unsigned()->nullable();
             $table->bigInteger('user_id')->unsigned()->nullable();
-            $table->tinyInteger('moderated_id')->unsigned()->default(3);
             $table->json('slug')->nullable();
             $table->json('alt')->nullable();
             $table->json('title')->nullable();
             $table->json('description')->nullable();
+            $table->tinyInteger('moderated_id')->unsigned()->default(config('klikbud.klikbud.moderated.to_moderation'));
             $table->softDeletes();
             $table->timestamps();
         });

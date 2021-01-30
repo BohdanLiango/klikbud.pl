@@ -19,7 +19,7 @@ class CreateKlikbudContactTable extends Migration
             $table->text('email')->nullable();
             $table->text('message')->nullable();
             $table->bigInteger('user_read_id')->unsigned()->nullable();
-            $table->tinyInteger('status_id')->unsigned()->nullable();
+            $table->tinyInteger('status_id')->unsigned()->default(config('klikbud.klikbud.status_contact.new'));
             $table->softDeletes();
             $table->timestamps();
         });
