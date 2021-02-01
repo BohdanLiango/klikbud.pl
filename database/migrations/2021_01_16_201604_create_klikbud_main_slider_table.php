@@ -15,7 +15,7 @@ class CreateKlikbudMainSliderTable extends Migration
     {
         Schema::create('klikbud_main_slider', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('status_to_main_page_id')->unsigned()->default(config('klikbud.klikbud.status_to_main_page.not_visible'));
+            $table->tinyInteger('status_to_main_page_id')->unsigned()->default(config('klikbud.status.status_to_main_page.not_visible'));
             $table->integer('slider_number_show')->nullable(); //1,2,3; 0 - default
             $table->bigInteger('image_id')->unsigned()->nullable(); //id
             $table->bigInteger('user_id')->unsigned()->nullable();
@@ -23,7 +23,7 @@ class CreateKlikbudMainSliderTable extends Migration
             $table->json('textYellow')->nullable();
             $table->json('textBlack')->nullable();
             $table->json('description')->nullable();
-            $table->tinyInteger('moderated_id')->unsigned()->default(config('klikbud.klikbud.moderated.to_moderation'));
+            $table->tinyInteger('moderated_id')->unsigned()->default(config('klikbud.moderated.to_moderation'));
             $table->softDeletes();
             $table->timestamps();
         });

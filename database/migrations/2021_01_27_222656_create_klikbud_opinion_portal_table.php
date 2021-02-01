@@ -19,6 +19,7 @@ class CreateKlikbudOpinionPortalTable extends Migration
             $table->text('url');
             $table->bigInteger('user_id');
             $table->bigInteger('image_id')->nullable();
+            $table->tinyInteger('moderated_id')->unsigned()->default(config('klikbud.moderated.to_moderation'));
             $table->softDeletes();
             $table->timestamps();
         });
