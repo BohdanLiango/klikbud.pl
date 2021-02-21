@@ -1,16 +1,18 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Opinion;
 
+use App\Models\Services;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Rennokki\QueryCache\Traits\QueryCacheable;
 use Venturecraft\Revisionable\RevisionableTrait;
 
-class Testimonials extends Model
+class Opinion extends Model
 {
-    protected $table = 'klikbud_testimonials';
+    protected $table = 'klikbud_opinion';
     protected $guarded = [];
     protected $casts = [
         'testimonial_service' => 'array',
@@ -29,4 +31,17 @@ class Testimonials extends Model
     use QueryCacheable;
     protected $cacheFor = 3600 * 3600;
     protected static $flushCacheOnUpdate = true;
+
+    /**
+     * @return BelongsTo
+     */
+    public function portal(): belongsTo
+    {
+        return $this->belongsTo(OpinionPortal::class, 'portal_opinion_id');
+    }
+
+    public function service()
+    {
+        return $this->belongsTo(Services::class, 'service_id');
+    }
 }

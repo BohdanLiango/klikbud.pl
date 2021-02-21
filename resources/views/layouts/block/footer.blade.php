@@ -38,32 +38,7 @@
                 </div>
                 {{--<!-- NEWSLETTER -->--}}
                 <div class="col-md-3 col-sm-6">
-                    <div class="widget widget_newsletter">
-                        <h4 class="widget-title">{{ trans('layout.footer.newsletter') }}</h4>
-                        <div class="newsletter-bx">
-                            <form action="{{route('main')}}" method="post">
-                                @csrf
-                                @if (session('status') === 'newsletterStore')
-                                    <ul>
-                                        <strong style="color: green"><i class="fa fa-thumbs-o-up"></i> {{ trans('layout.footer.newsletterSuccess') }}!</strong>
-                                    </ul>
-                                @endif
-                                @if ($errors->any())
-                                        <ul>
-                                            @foreach ($errors->all() as $error)
-                                                <strong style="color: red"><i class="fa fa-remove"></i> {{ $error }}!</strong>
-                                            @endforeach
-                                        </ul>
-                                @endif
-                                <div class="input-group">
-                                    <input name="emailNewsletter" class="form-control" placeholder="{{ trans('layout.footer.enterYourEmail') }}" type="text" value="{{ old('emailNewsletter') }}">
-                                    <span class="input-group-btn">
-                                            <button type="submit" class="site-button"><i class="fa fa-paper-plane-o"></i></button>
-                                        </span>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                    @livewire('dashboard.newsletter-livewire')
                     {{--<!-- SOCIAL LINKS -->--}}
                     <div class="widget widget_social_inks">
                         <h4 class="widget-title">{{ trans('layout.footer.socialLinks') }}</h4>

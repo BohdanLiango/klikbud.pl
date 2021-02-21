@@ -10,7 +10,7 @@ use Venturecraft\Revisionable\RevisionableTrait;
 
 class Files extends Model
 {
-    protected $table = 'files';
+    protected $table = 'file';
     protected $guarded = [];
 
     use HasFactory;

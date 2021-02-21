@@ -6,29 +6,29 @@
 @section('content')
     {{--<!-- CONTENT START -->--}}
     <div class="page-content">
-        <!-- Slider -->
-        @include('main.block.mainSlider2')
+        {{--<!-- Slider -->--}}
+        @livewire('dashboard.main-s-lider-livewire')
         <!-- Slider END -->
         <!-- ABOUT COMPANY SECTION START -->
         @include('main.block.about')
         <!-- ABOUT COMPANY SECTION END -->
         <!-- SERVICES START  -->
-        @include('main.block.services')
+        @livewire('dashboard.services-livewire')
         <!-- SERVICES CONTENT END -->
         <!-- SECTION CONTENT START -->
         @include('main.block.faq')
         <!-- SECTION CONTENT  END -->
         <!-- LATEST PROJECT SECTION START -->
-        @include('main.block.latestProject')
+        @livewire('dashboard.latest-image-gallery-livewire')
         <!-- LATEST PROJECT SECTION END -->
         <!-- COMPANY DETAIL SECTION START -->
-        @include('main.block.companyDetail')
+        @livewire('dashboard.counter-livewire')
         <!-- COMPANY DETAIL SECTION End -->
         <!-- WHY CHOOSE US SECTION START  -->
         @include('main.block.whyChooseUs')
         <!-- WHY CHOOSE US SECTION END  -->
         <!-- TESTIMONIAL SECTION START -->
-        @include('main.block.testimonials')
+        @livewire('dashboard.opinion-livewire')
         <!-- TESTIMONIAL SECTION START -->
         <!-- OUR CLIENT SLIDER START -->
         @include('main.block.contactFooter')

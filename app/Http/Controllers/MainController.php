@@ -49,15 +49,14 @@ class MainController extends Controller
      */
     public function show()
     {
-        $sliders = $this->mainSlider->showActiveSlidersForMainPage();
-        $services = $this->service->showWelcomePageActiveServices();
-        $counter = $this->counter->showAllCountersToWelcomePage();
-        $testimonials = $this->testimonial->showActiveTestimonialsToWelcomePage();
-        $categoryGallery = $this->additionalData->gallery_categories();
-        $gallery = $this->gallery->showAllToMainPage(6);
+//        $sliders = $this->mainSlider->showActiveSlidersForMainPage();
+//        $services = $this->service->showWelcomePageActiveServices();
+//        $counter = $this->counter->showAllCountersToWelcomePage();
+//        $testimonials = $this->testimonial->showActiveTestimonialsToWelcomePage();
+//        $categoryGallery = $this->additionalData->gallery_categories();
+//        $gallery = $this->gallery->showAllToMainPage(6);
 
-        return view('main.content', compact('sliders', 'services', 'counter', 'testimonials',
-                                                                'categoryGallery', 'gallery'));
+        return view('main.content');
     }
 
 }
