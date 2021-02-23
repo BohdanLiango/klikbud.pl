@@ -6,16 +6,6 @@ class GalleryController extends Controller
 {
     public function show()
     {
-
-    }
-
-    public function showAll()
-    {
-
-    }
-
-    public function showByCategorySlug()
-    {
-
+        return view('gallery.content');
     }
 }
