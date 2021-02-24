@@ -24,4 +24,16 @@ class ContentLivewire extends Component
         $categories = app()->make(AdditionalData::class)->gallery_categories();
         return view('livewire.gallery.content-livewire', compact('gallery', 'categories'));
     }
+
+    public function searchCategory($id)
+    {
+        if($id === 100000)
+        {
+            $this->searchCategory = '';
+        }else{
+            $this->searchCategory = $id;
+        }
+
+    }
+
 }
