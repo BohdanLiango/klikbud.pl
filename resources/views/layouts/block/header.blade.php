@@ -68,7 +68,7 @@
                             <a href="{{ route('gallery') }}">{{ trans('layout.navigation.gallery') }}</a>
                         </li>
                         <li class="{{ Route::currentRouteName() === 'main' ? 'active' : null}}">
-                            <a href="{{ route('main') }}">{{ trans('layout.navigation.contact') }}</a>
+                            <a href="{{ route('contact') }}">{{ trans('layout.navigation.contact') }}</a>
                         </li>
                     </ul>
                 </div>

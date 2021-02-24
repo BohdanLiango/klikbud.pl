@@ -27,6 +27,7 @@ return [
         'danger' => 'Podany adres e-mail jest niepoprawny',
         'username' => 'Change a few things up and try submitting again.',
         'email' => 'Change a few things up and try submitting again.',
-        'message' => 'Change a few things up and try submitting again.'
+        'message' => 'Change a few things up and try submitting again.',
+        'google.recaptcha' => 'Google uważa, że jesteś botem. Odśwież i spróbuj ponownie'
     ],
 ];

@@ -15,6 +15,9 @@
                             @empty
                                 {{ trans('gallery.title') }}
                             @endforelse
+                            @if($searchCategory === '')
+                                    {{ trans('gallery.title') }}
+                            @endif
                         @else
                             {{ trans('gallery.title') }}
                         @endif
@@ -31,12 +34,15 @@
                     @if( Route::currentRouteName() !== 'gallery')
                         @forelse($categories as $category)
                             @if($category['value'] === $searchCategory)
-                                <li><a href="{{ route('gallery') }}"><i class="fa fa-file-image-o"></i> {{  trans('gallery.title') }}</a></li>
+                                <li><a href="{{ route('gallery') }}"> {{  trans('gallery.title') }}</a></li>
                                 <li>{{ $category['title'] }}</li>
                             @endif
                         @empty
                             <li>{{ trans('gallery.title') }}</li>
                         @endforelse
+                            @if($searchCategory === '')
+                                <li>{{  trans('gallery.title') }}</li>
+                            @endif
                     @else
                         <li>{{ trans('gallery.title') }}</li>
                     @endif
@@ -82,7 +88,6 @@
                                 </div>
                             </div>
                         @empty
-                            Nothing
                         @endforelse
                     </div>
                 </div>

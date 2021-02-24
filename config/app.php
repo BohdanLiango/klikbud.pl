@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -133,6 +132,13 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
+
+
+    'captcha_site_key' => env('CAPTCHA_SITE_KEY', '6Ld0eGYaAAAAAG4awtNo5BILlYtXYpIy100MvBi0'),
+    'captcha_secret_key' => env('CAPTCHA_SITE_SECRET', '6Ld0eGYaAAAAANwVTi3M6YFy85EsuY4Vc3XeV9Jq'),
+
+
+
 
     'providers' => [
 

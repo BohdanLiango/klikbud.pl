@@ -6,11 +6,6 @@ class ContactController extends Controller
 {
     public function show()
     {
-
-    }
-
-    public function save()
-    {
-
+        return view('contact.content');
     }
 }

@@ -18,11 +18,7 @@
                                     <strong class="text-uppercase">{{ trans('error.error') }}</strong>
                                     <strong>5<i class="fa fa-frown-o text-primary"></i>3</strong>
                                     <span>{{ __('error.503.title') }}</span>
-                                    @if(empty(URL::previous()) && route('welcome.home') !== NULL )
-                                        <a href="{{ route('welcome.home') }}" class="site-button ">{{ trans('error.home') }}  <i class="fa fa-angle-double-right"></i></a>
-                                    @else
-                                        <a href="{{ route('home.main')}}" class="site-button ">{{ trans('error.back') }}  <i class="fa fa-angle-double-right"></i></a>
-                                    @endif
+                                    <a href="http://klikbud.pl/" class="site-button ">{{ trans('error.home') }}  <i class="fa fa-angle-double-right"></i></a>
                                 </form>
                             </div>
                         </div>
