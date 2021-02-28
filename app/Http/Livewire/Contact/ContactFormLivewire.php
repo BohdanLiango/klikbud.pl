@@ -29,7 +29,7 @@ class ContactFormLivewire extends Component
 
     public function updatedCaptcha($token)
     {
-        $response = Http::post('https://www.google.com/recaptcha/api/siteverify?secret=' . config('app.captcha_secret_key') . '&response=' . $token);
+        $response = Http::post('https://www.google.com/recaptcha/api/siteverify?secret=' . env('CAPTCHA_SITE_SECRET') . '&response=' . $token);
         $this->captcha = $response->json()['score'];
 
         if (!$this->captcha > .3) {

@@ -62,9 +62,8 @@
                     </div>
                     <div class="col-md-12">
                         <button
-                            data-sitekey="{{ config('app.captcha_site_key') }}"
+                            data-sitekey="{{ env('CAPTCHA_SITE_KEY') }}"
                             data-callback='handle'
-
                             name="submit" type="submit" value="Submit" class="g-recaptcha site-button  m-r15">{{ trans('contact.submit') }}  <i class="fa fa-angle-double-right"></i></button>
                     </div>
                 </div>
@@ -72,11 +71,11 @@
         </div>
     </div>
 </div>
-<script src="https://www.google.com/recaptcha/api.js?render={{ config('app.captcha_site_key') }}"></script>
+<script src="https://www.google.com/recaptcha/api.js?render={{ env('CAPTCHA_SITE_KEY') }}"></script>
 <script>
     function handle(e) {
         grecaptcha.ready(function () {
-            grecaptcha.execute('{{config('app.captcha_site_key')}}', {action: 'submit'})
+            grecaptcha.execute('{{ env('CAPTCHA_SITE_KEY') }}', {action: 'submit'})
                 .then(function (token) {
                 @this.set('captcha', token);
                 });
