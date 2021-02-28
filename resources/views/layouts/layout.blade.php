@@ -79,7 +79,7 @@
     @include('layouts.block.footer')
     {{-- <!-- FOOTER END -->--}}
     {{--<!-- SCROLL TOP BUTTON -->--}}
-    <button class="scroltop"><span class=" iconmoon-house relative" id="btn-vibrate"></span>Top</button>
+    <button class="scroltop" style="color: #FFBC13"><span class="iconmoon-house relative" id="btn-vibrate" ></span>Top</button>
 </div>
 @yield('js')
 <script>
