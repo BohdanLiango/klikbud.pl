@@ -27,7 +27,7 @@ class NewsletterLivewire extends Component
         ];
         Newsletter::create($data);
 
-        $this->email = null;
+        $this->emailNewsletter = null;
 
         session()->flash('store', trans('layout.footer.newsletterSuccess'));
     }
