@@ -8,31 +8,31 @@
     <div class="page-content">
         {{--<!-- Slider -->--}}
         @livewire('dashboard.main-s-lider-livewire')
-        <!-- Slider END -->
-        <!-- ABOUT COMPANY SECTION START -->
+        {{--<!-- Slider END -->--}}
+        {{--<!-- ABOUT COMPANY SECTION START -->--}}
         @include('main.block.about')
-        <!-- ABOUT COMPANY SECTION END -->
-        <!-- SERVICES START  -->
+        {{--<!-- ABOUT COMPANY SECTION END -->--}}
+        {{--<!-- SERVICES START  -->--}}
         @livewire('dashboard.services-livewire')
-        <!-- SERVICES CONTENT END -->
-        <!-- SECTION CONTENT START -->
+        {{--<!-- SERVICES CONTENT END -->--}}
+        {{--<!-- SECTION CONTENT START -->--}}
         @include('main.block.faq')
-        <!-- SECTION CONTENT  END -->
-        <!-- LATEST PROJECT SECTION START -->
+        {{--<!-- SECTION CONTENT  END -->--}}
+        {{--<!-- LATEST PROJECT SECTION START -->--}}
         @livewire('dashboard.latest-image-gallery-livewire')
-        <!-- LATEST PROJECT SECTION END -->
-        <!-- COMPANY DETAIL SECTION START -->
+        {{--<!-- LATEST PROJECT SECTION END -->--}}
+        {{--<!-- COMPANY DETAIL SECTION START -->--}}
         @livewire('dashboard.counter-livewire')
-        <!-- COMPANY DETAIL SECTION End -->
-        <!-- WHY CHOOSE US SECTION START  -->
+        {{--<!-- COMPANY DETAIL SECTION End -->--}}
+        {{--<!-- WHY CHOOSE US SECTION START  -->--}}
         @include('main.block.whyChooseUs')
-        <!-- WHY CHOOSE US SECTION END  -->
-        <!-- TESTIMONIAL SECTION START -->
+        {{--<!-- WHY CHOOSE US SECTION END  -->--}}
+        {{--<!-- TESTIMONIAL SECTION START -->--}}
         @livewire('dashboard.opinion-livewire')
-        <!-- TESTIMONIAL SECTION START -->
-        <!-- OUR CLIENT SLIDER START -->
+        {{--<!-- TESTIMONIAL SECTION START -->--}}
+        {{--<!-- OUR CLIENT SLIDER START -->--}}
         @include('main.block.contactFooter')
-        <!-- OUR CLIENT SLIDER END -->
+        {{--<!-- OUR CLIENT SLIDER END -->--}}
     </div>
     {{--<!-- CONTENT END -->--}}
 @endsection

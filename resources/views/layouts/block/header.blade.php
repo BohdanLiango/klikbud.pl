@@ -61,15 +61,9 @@
                 {{--<!-- MAIN Vav -->--}}
                 <div class="header-nav navbar-collapse collapse ">
                     <ul class=" nav navbar-nav">
-                        <li class="{{ Route::currentRouteName() === 'main' ? 'active' : null}}">
-                            <a href="{{ route('main') }}">{{ trans('layout.navigation.home') }}</a>
-                        </li>
-                        <li class="{{ Route::currentRouteName() === 'gallery' ? 'active' : null}}">
-                            <a href="{{ route('gallery') }}">{{ trans('layout.navigation.gallery') }}</a>
-                        </li>
-                        <li class="{{ Route::currentRouteName() === 'main' ? 'active' : null}}">
-                            <a href="{{ route('contact') }}">{{ trans('layout.navigation.contact') }}</a>
-                        </li>
+                        <li><a href="{{ route('main') }}" style="{{ Route::currentRouteName() === 'main' ? 'color: #FFBC13' : null}}">{{ trans('layout.navigation.home') }}</a></li>
+                        <li><a href="{{ route('gallery') }}" style="{{ Route::currentRouteName() === 'gallery' ? 'color: #FFBC13' : null}}">{{ trans('layout.navigation.gallery') }}</a></li>
+                        <li><a href="{{ route('contact') }}" style="{{ Route::currentRouteName() === 'contact' ? 'color: #FFBC13' : null}}">{{ trans('layout.navigation.contact') }}</a></li>
                     </ul>
                 </div>
             </div>

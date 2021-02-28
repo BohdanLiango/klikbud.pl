@@ -8698,7 +8698,7 @@ header .logo{
 	height:15px;
 	width:100%;
 	background-color:#ffbc13;
-	background-image:url(../../images/static/cs/footer-strip.webp);
+	background-image:url(../images/static/cs/footer-strip.png);
 	background-repeat:repeat-x;
 	background-position:center top;
 }
@@ -9929,7 +9929,7 @@ ol.commentlist li::after {
 	5. services
 -------------------------------------*/
 .bg-service-team {
-	background-image: url(../../images/static/cs/our-services/crane-left.jpg);
+	background-image: url(../images/static/cs/our-services/crane-left.jpg);
 	background-repeat: no-repeat;
 	background-position: -200px bottom;
 }
@@ -10003,7 +10003,7 @@ ol.commentlist li::after {
 	top: -20px;
 	z-index: 1;
 	background-color:#ffbc13;
-	background-image:url(../../images/static/cs/background/bg7.webp);
+	background-image:url(../images/static/cs/background/bg7.png);
 	background-repeat:repeat;
 	-webkit-transform: skew(30deg);
 	-moz-transform: skew(30deg);
@@ -10801,13 +10801,13 @@ ol.commentlist li::after {
 	opacity:0.4;
 }
 .scale-bg-top:before{
-	background-image:url(../../images/static/cs/background/scale-top.webp);
+	background-image:url(../images/static/cs/background/scale-top.png);
 	background-position:top;
 	background-repeat:repeat-x;
 	top:0px;
 }
 .scale-bg-bottom:after{
-	background-image:url(../../images/static/cs/background/scale-bottom.webp);
+	background-image:url(../images/static/cs/background/scale-bottom.png);
 	background-position:bottom;
 	background-repeat:repeat-x;
 	bottom:0px;
