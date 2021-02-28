@@ -61,10 +61,24 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <button type="submit"  class="site-button  m-r15">{{ trans('contact.submit') }}  <i class="fa fa-angle-double-right"></i></button>
+                        <button type="submit"
+                                data-sitekey="{{env('CAPTCHA_SITE_KEY')}}"
+                                data-callback='handle'
+                                data-action='submit'  class="g-recaptcha site-button  m-r15">{{ trans('contact.submit') }}  <i class="fa fa-angle-double-right"></i></button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+    <script src="https://www.google.com/recaptcha/api.js?render={{env('CAPTCHA_SITE_KEY')}}"></script>
+    <script>
+        function handle(e) {
+            grecaptcha.ready(function () {
+                grecaptcha.execute('{{env('CAPTCHA_SITE_KEY')}}', {action: 'submit'})
+                    .then(function (token) {
+                    @this.set('captcha', token);
+                    });
+            })
+        }
+    </script>
 </div>
