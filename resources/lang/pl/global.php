@@ -302,4 +302,5 @@ return [
     'team-members'                         => 'Członkowie grupy',
     'calendar'                             => 'Kalendarz',
     'messenger'                            => 'Wiadomości',
+    'loading'                              => 'Ładowanie'
 ];

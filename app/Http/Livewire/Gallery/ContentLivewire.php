@@ -20,7 +20,7 @@ class ContentLivewire extends Component
         $gallery = Gallery::when($this->searchCategory != '', function ($query){
             $query->where('category_id', '=', $this->searchCategory);
         })->where('status_gallery_id', '=', config('klikbud.status.status_to_gallery.visible'))
-            ->orderBy('ID', 'desc')->paginate(12);
+            ->orderBy('ID', 'desc')->paginate(2);
         $categories = app()->make(AdditionalData::class)->gallery_categories();
         return view('livewire.gallery.content-livewire', compact('gallery', 'categories'));
     }
@@ -33,7 +33,6 @@ class ContentLivewire extends Component
         }else{
             $this->searchCategory = $id;
         }
-
     }
 
 }

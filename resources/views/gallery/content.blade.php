@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('title', __('galleryPage.title'))
+@section('title', trans('gallery.title'))
 @section('styles')
     {{--<!-- BOOTSTRAP STYLE SHEET -->--}}
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">

@@ -67,7 +67,10 @@
                 {{--<!-- PAGINATION END -->--}}
                 {{--<!-- GALLERY CONTENT START -->--}}
                 <div class="row">
-                    <div class="portfolio-wrap mfp-gallery no-col-gap">
+                    <div class="portfolio-wrap mfp-gallery no-col-gap" wire:loading wire:target="searchCategory">
+                        {{ trans('global.loading') }}
+                    </div>
+                    <div class="portfolio-wrap mfp-gallery no-col-gap" wire:loading.remove wire:target="searchCategory">
                         @forelse($gallery as $item)
                             <div class="masonry-item cat-{{ $item->category_id }} col-lg-3 col-md-3 col-sm-6 col-xs-6">
                                 <div class="wt-gallery-bx p-a15">
@@ -94,7 +97,7 @@
                 {{--<!-- GALLERY CONTENT END -->--}}
                 {{--<!-- PAGINATION START -->--}}
                 <div class="pagination-bx  clearfix ">
-                    {{ $gallery->links() }}
+                    {{ $gallery->links('pagination::bootstrap-4') }}
                 </div>
                 {{--                <!-- PAGINATION END -->--}}
                 <p><b>Kopiowanie i publikowanie materiałów i zdjęć zamieszczonych w serwisie tylko za <a href="{{ route('contact') }}">zgodą</a> właścicieli. </b></p>

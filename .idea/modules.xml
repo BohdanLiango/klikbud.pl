@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/Development/build-template/html/.idea/html.iml" filepath="$USER_HOME$/Development/build-template/html/.idea/html.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/klikbud.pl.iml" filepath="$PROJECT_DIR$/.idea/klikbud.pl.iml" />
     </modules>
   </component>

@@ -26,7 +26,10 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="portfolio-wrap mfp-gallery no-col-gap">
+                <div class="portfolio-wrap mfp-gallery no-col-gap" wire:loading>
+                    {{ trans('global.loading') }}......
+                </div>
+                <div class="portfolio-wrap mfp-gallery no-col-gap" wire:loading.remove>
                     {{--<!-- COLUMN -->--}}
                     @forelse($gallery as $item)
                         <div class="masonry-item col-lg-4 col-md-4 col-sm-6 col-xs-6">

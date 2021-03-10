@@ -18,7 +18,7 @@
                                     <strong class="text-uppercase">{{ trans('error.error') }}</strong>
                                     <strong>5<i class="fa fa-frown-o text-primary"></i>3</strong>
                                     <span>{{ __('error.503.title') }}</span>
-                                    <a href="http://klikbud.pl/" class="site-button ">{{ trans('error.home') }}  <i class="fa fa-angle-double-right"></i></a>
+{{--                                    <a href="http://klikbud.pl/" class="site-button ">{{ trans('error.home') }}  <i class="fa fa-angle-double-right"></i></a>--}}
                                 </form>
                             </div>
                         </div>
