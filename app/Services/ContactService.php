@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Contact;
 use Exception;
+use GuzzleHttp\Client;
 
 class ContactService extends Service
 {
@@ -18,8 +19,8 @@ class ContactService extends Service
     {
         try {
             $user_read_id = NULL;
-            $user_name = htmlspecialchars($user_name);
-            $message = htmlspecialchars($message);
+            $user_name = htmlspecialchars($user_name, ENT_QUOTES | ENT_HTML5);
+            $message = htmlspecialchars($message, ENT_QUOTES | ENT_HTML5);
             $store = new Contact();
 
             $data = [
@@ -31,6 +32,7 @@ class ContactService extends Service
             $store->fill($data);
             $store->save();
 
+            $response = (new Client())->request('GET', config('klikbud.url_to_clear_cache'));
         }catch (Exception $e){
             abort(403);
         }

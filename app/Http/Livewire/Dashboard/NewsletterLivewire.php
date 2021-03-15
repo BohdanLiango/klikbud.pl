@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Dashboard;
 
 use App\Models\Newsletter;
+use GuzzleHttp\Client;
 use Livewire\Component;
 
 class NewsletterLivewire extends Component
@@ -21,6 +22,8 @@ class NewsletterLivewire extends Component
     public function save()
     {
         $this->validate();
+
+        $response = (new Client())->request('GET',  config('klikbud.url_to_clear_cache'));
 
         $data = [
             'email' => $this->emailNewsletter

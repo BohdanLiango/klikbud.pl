@@ -1,5 +1,7 @@
 <?php
 return [
+    'url_to_clear_cache' => 'http://127.0.0.1:8000/asd2331dsaf34234dfdsf',
+
     'status' => [
         'status_to_main_page' => [
             'visible' => 1,
