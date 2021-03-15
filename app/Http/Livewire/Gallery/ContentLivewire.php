@@ -5,10 +5,13 @@ namespace App\Http\Livewire\Gallery;
 use App\Data\AdditionalData;
 use App\Models\Gallery;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class ContentLivewire extends Component
 {
     public $searchCategory;
+
+    use WithPagination;
 
     public function mount()
     {

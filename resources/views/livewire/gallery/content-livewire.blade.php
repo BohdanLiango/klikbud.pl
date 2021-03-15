@@ -96,10 +96,8 @@
                 </div>
                 {{--<!-- GALLERY CONTENT END -->--}}
                 {{--<!-- PAGINATION START -->--}}
-                <div class="pagination-bx  clearfix ">
-                    {{ $gallery->links('pagination::bootstrap-4') }}
-                </div>
-                {{--                <!-- PAGINATION END -->--}}
+                    {{ $gallery->links('vendor.livewire.bootstrap') }}
+                {{--<!-- PAGINATION END -->--}}
                 <p><b>Kopiowanie i publikowanie materiałów i zdjęć zamieszczonych w serwisie tylko za <a href="{{ route('contact') }}">zgodą</a> właścicieli. </b></p>
             </div>
 
