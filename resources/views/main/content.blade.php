@@ -30,7 +30,8 @@
         {{--<!-- TESTIMONIAL SECTION START -->--}}
         @livewire('dashboard.opinion-livewire')
         {{--<!-- TESTIMONIAL SECTION START -->--}}
-        {{--<!-- OUR CLIENT SLIDER START -->--}}
+{{--        @include('main.block.our-client')--}}
+        {{--<!-- OUR CLIENT SLIDER START -->- -}}
         @include('main.block.contactFooter')
         {{--<!-- OUR CLIENT SLIDER END -->--}}
     </div>
