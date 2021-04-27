@@ -21,7 +21,7 @@ return [
         'facebook' => 'https://web.facebook.com/Klik-Bud-328610947687479/?tn-str=k*F',
         'instagram' => 'https://www.instagram.com/klikbud/?hl=pl',
         'youtube' => 'https://www.facebook.com/Klik-Bud-328610947687479/',
-        'email' => 'info@klikbud.pl',
+        'email' => 'klik.bud@gmail.com',
         'phone' => '+48 881 501 811'
     ],
 
@@ -49,7 +49,7 @@ return [
         'companyDetailsNip' => 'NIP: 6772434747',
         'companyDetailsRegon' => 'REGON: 380257629',
         'email' => 'E-mail',
-        'emailOne' => 'info@klikbud.pl',
+        'emailOne' => 'klik.bud@gmail.com',
         'emailTwo' => 'klik.bud@gmail.com',
         'aboutCompany' => 'O firmie',
         'instagram' => 'Instagram',
