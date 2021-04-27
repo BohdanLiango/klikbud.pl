@@ -10,7 +10,7 @@ return [
     'phoneOne' => '+48 881 301 811',
     'phoneTwo' => '+48 881 501 811',
     'email' => 'E-mail ',
-    'emailOne' => 'info@klikbud.pl',
+    'emailOne' => 'klik.bud@gmail.com',
     'emailTwo' => 'klik.bud@gmail.com',
     'address' => 'Adres',
     'addressAdditional' => 'ul. Kraszewskiego 36/128, 30-110, Kraków',
